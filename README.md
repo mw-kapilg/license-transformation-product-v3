@@ -13,3 +13,11 @@ Run the tests locally from the repository root:
 addpath("src")
 results = runtests("tests")
 ```
+
+## Continuous integration
+
+`.github/workflows/ci.yml` runs the tests on GitHub Actions with MATLAB and
+MATLAB Coder. MATLAB Coder is a transformation product, so it needs a
+[MATLAB batch licensing token](https://github.com/mathworks-ref-arch/matlab-dockerfile/blob/main/alternates/non-interactive/MATLAB-BATCH.md)
+stored as the repository secret `MLM_LICENSE_TOKEN`. That's true even for
+public repositories.
